@@ -37,7 +37,7 @@ Assignment Report 3
 -   네트워크 구조
 
     과제를 통하여 설계한 네트워크의 구조도는 다음과 같다.
-    ![](KakaoTalk_20221022_194210461.png)
+    ![](media/KakaoTalk_20221022_194210461.png)
 
     모델의 구조도에 대하여 설명하자면 Feature Extraction부분에서는 3번의 convolution-pooling연산을 진행하고, Flatten하여 parameter를 flat하게 만든 후 이를 128 dimmention으로 만든다. 그 후 이를 4개의 결과로 예측하여 어떠한 값으로 추정되는지 구분한 후 softmax activation하여 원하는 값만 얻게 된다.
 
