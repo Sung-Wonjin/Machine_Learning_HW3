@@ -22,22 +22,6 @@ Assignment Report 3
 
     이를 사용하는 예시로는 Sobel Filter가 있는데 Sobel Filter는 보통 Image의 Edge를 검출하기 위해서 사용한다. Filter에는 이미지 검출을 위한 특정 값이 들어있고, Filter와 Image의 Convolution을 이용해서 이미지의 Edge의 Feature Map을 검출할 수 있다.
 
-|   |   |   |
-|---|---|---|
-|   |   |   |
-|   |   |   |
-
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-
-|   |   |   |
-|---|---|---|
-|   |   |   |
-|   |   |   |
 
 보통 Convolution은 Convolutional Neural Network(CNN)에서 Convolutional Layer에서 주로 사용되며 위에서 설명한 Filter를 통해 여러 픽셀들의 Convolution연산을 통해 영상의 특징을 추출하는 곳에 사용된다. CNN에서는 Convolution 연산을 통해 도출된 Feature map을 Subsampling을 반복하여 Pooling Layer에 집어넣는다. Pooling layer에서는 이미지의 Feature Map을 축소하면서 이미지의 품질은 떨어지지만 하나의 픽셀로부터 형태를 분석하기에 좋은 형태로 값을 추출하고, 이미지를 분류하는 Fully Connected Layer에 집어넣어 이미지를 분류하게 된다.
 
@@ -47,15 +31,6 @@ Assignment Report 3
 
     아래를 예로 들면 왼쪽의 matrix를 2x2 크기의 max pooling 연산을 한다고 했을 때 연산의 결과는 오른쪽과 같이 나오게 된다
 
-| 1 | 4 | 2 | 6 |
-|---|---|---|---|
-| 8 | 2 | 4 | 3 |
-| 4 | 3 | 2 | 4 |
-| 4 | 8 | 2 | 1 |
-
-| 8 | 6 |
-|---|---|
-| 8 | 4 |
 
 위의 연산에서 파란 테두리로 되어있는 부분을 살펴보면 가장 큰 값은 8이다. 이 때 Max pooling을 한다면 가장 큰 값인 8만 남겨두는 연산이 될 것이다. 위의 연산과 같이 pooling을 진행했을 때 이미지의 Size가 줄어들고 그에 따른 연산양이 줄어들게 된다.
 
@@ -97,7 +72,8 @@ Assignment Report 3
 
     과제를 진행하며 얻은 몇 번의 학습 및 실행 결과이다.
 
-    ![](media/9982a9e7cf5ae20e5a22e31e856079e6.png)[0. 0. 0. 1.] / sunshine [0. 1. 0. 0.] / rainy
+    ![](media/9982a9e7cf5ae20e5a22e31e856079e6.png) / rainy [0. 0. 0. 1.]
+    ![](media/Figure_1.png) / sunhine [0. 1. 0. 0.]
 
 ![](media/039c32888b4db403f02ce2d62749631e.png)이외에도 몇가지 validation data외에도 test data를 넣어 결과가 정상적으로 나오는지 확인해 보았으며 모델의 정확도는 약 84\~87%가 도출되었다.
 
